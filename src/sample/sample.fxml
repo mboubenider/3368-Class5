@@ -1,0 +1,84 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<HBox fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <HBox   >
+        <children>
+            <ListView fx:id="employeeListView">
+
+            </ListView>
+        </children>
+    </HBox>
+    <VBox>
+        <HBox spacing="5">
+            <Label prefWidth="150">First Name</Label>
+            <TextField fx:id="firstNameTextField"></TextField>
+        </HBox>
+        <HBox spacing="5">
+            <Label prefWidth="150">Last Name</Label>
+            <TextField></TextField>
+        </HBox>
+        <HBox spacing="5">
+            <Label prefWidth="150">Is Active</Label>
+            <CheckBox fx:id="isActiveCheckBox"/>
+        </HBox>
+        <HBox spacing="5">
+            <Label prefWidth="150">Something Else</Label>
+            <TextField></TextField>
+        </HBox>
+
+        <HBox>
+            <VBox>
+                <JFXButton text="CREATE DB BUTTON" prefWidth="150" fx:id="createdbbutton"/>
+                <JFXButton text="DELETE BUTTON" prefWidth="150" fx:id="deletetablebutton"/>
+                <JFXButton text="LOAD BUTTON" prefWidth="150" fx:id="loaddatabutton"/>
+                <JFXCheckBox text="MATERIAL CHECKBOX" prefWidth="150"/>
+                <JFXRadioButton text="MATERIAL RADIOBUTTON" prefWidth="150"/>
+                <JFXComboBox prefWidth="150">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Apple" />
+                            <String fx:value="Orange" />
+                            <String fx:value="Banana" />
+                        </FXCollections>
+                    </items>
+                </JFXComboBox>
+                <JFXListView fx:id="materialListView" prefHeight="200" prefWidth="250"/>
+            </VBox>
+            <VBox>
+                <Button text="CREATE AWS DB" prefWidth="150" fx:id="createawsbutton"/>
+                <Button text="DELETE AWS TABLE" prefWidth="150" fx:id="deleteawsbutton"/>
+                <Button text="LOAD AWS DATA" prefWidth="150" fx:id="loadawsbutton"/>
+                <CheckBox text="Normal CHECKBOX" prefWidth="150"/>
+                <RadioButton text="Normal RADIOBUTTON" prefWidth="150"/>
+                <ComboBox prefWidth="150">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Apple" />
+                            <String fx:value="Orange" />
+                            <String fx:value="Banana" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ListView fx:id="normalListView" prefHeight="200" prefWidth="250"/>
+            </VBox>
+        </HBox>
+
+    </VBox>
+</HBox>
